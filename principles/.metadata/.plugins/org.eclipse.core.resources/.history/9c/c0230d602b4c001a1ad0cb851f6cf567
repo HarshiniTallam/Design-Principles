@@ -1,0 +1,9 @@
+package com.epam.design_principles;
+
+public class Math {
+	public class Addition {
+		Addition(Double x, Double y) {
+			System.out.println(x+y);
+		}
+	}
+}

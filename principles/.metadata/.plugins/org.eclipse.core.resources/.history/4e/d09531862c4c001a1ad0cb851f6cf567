@@ -1,0 +1,38 @@
+package com.epam.design_principles;
+import java.util.*;
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("           CALCULATOR        ");
+		int op = 1;
+		while(op == 1) {
+			System.out.println("1.Addition"+"\n"+"2.Subtraction"+"\n"+"3.Multiplication"+"\n"+"4.Division");
+			System.out.println("Enter your option:");
+			int x = sc.nextInt();
+			if(x > 0 && x < 5) {
+				System.out.println("Enter two numbers:");
+				  double first_number = sc.nextDouble();
+				  double second_number = sc.nextDouble();
+				Math obj = new Math();
+				if(x == 1) {
+					obj.add(first_number, second_number);
+					
+				} else if(x == 2) {
+					obj.sub(first_number, second_number);
+				} else if(x == 3) {
+					obj.mul(first_number, second_number);
+				} else if(x == 4) {
+					obj.div(first_number, second_number);
+				} 
+			} else {
+				System.out.println("Please enter correct operator\n");
+			}
+			System.out.println("\nTo continue press 1 otherwise 0");
+			op = sc.nextInt();
+	    }
+
+	}
+
+}
